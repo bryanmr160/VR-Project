@@ -1,15 +1,18 @@
+using BNG;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Flashlight : MonoBehaviour
+public class Flashlight : GrabbableEvents
 {
-
-    public GameObject light;
+    Grabbable flashlight;
+    public GameObject lightBulb;
+    bool lightFunction = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        flashlight = GetComponent<Grabbable>();
     }
 
     // Update is called once per frame
@@ -17,9 +20,24 @@ public class Flashlight : MonoBehaviour
     {
         //controls light
         //add inputs from vr controller
-        if (light != null)
+        if (flashlight.BeingHeld && input.BButtonDown)
         {
-            light.SetActive(true);
+            lightFunction = !lightFunction;
+        }
+
+        if (flashlight.BeingHeld)
+        {
+            print("held");
+        }
+
+        if (lightFunction)
+        {
+           print("pressed button");
+           lightBulb.SetActive(true);
+        }
+        else
+        {
+            lightBulb.SetActive(false);
         }
     }
 }
