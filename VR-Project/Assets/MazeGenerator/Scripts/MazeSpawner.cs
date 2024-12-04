@@ -20,7 +20,7 @@ public class MazeSpawner : MonoBehaviour {
 	public bool FullRandom = false;
 	public int RandomSeed = 12345;
 	public GameObject Floor = null;
-	public GameObject Wall = null;
+	public List<GameObject> Wall = new List<GameObject>();
 	public GameObject Pillar = null;
 	public int Rows = 5;
 	public int Columns = 5;
@@ -63,19 +63,23 @@ public class MazeSpawner : MonoBehaviour {
 				tmp = Instantiate(Floor,new Vector3(x,0,z), Quaternion.Euler(0,0,0)) as GameObject;
 				tmp.transform.parent = transform;
 				if(cell.WallRight){
-					tmp = Instantiate(Wall,new Vector3(x+CellWidth/2,0,z)+Wall.transform.position,Quaternion.Euler(0,90,0)) as GameObject;// right
+					GameObject newWall = RandomWall();
+                    tmp = Instantiate(newWall, new Vector3(x+CellWidth/2,0,z)+ newWall.transform.position,Quaternion.Euler(0,90,0)) as GameObject;// right
 					tmp.transform.parent = transform;
 				}
 				if(cell.WallFront){
-					tmp = Instantiate(Wall,new Vector3(x,0,z+CellHeight/2)+Wall.transform.position,Quaternion.Euler(0,0,0)) as GameObject;// front
+                    GameObject newWall = RandomWall();
+                    tmp = Instantiate(newWall, new Vector3(x,0,z+CellHeight/2)+ newWall.transform.position,Quaternion.Euler(0,0,0)) as GameObject;// front
 					tmp.transform.parent = transform;
 				}
 				if(cell.WallLeft){
-					tmp = Instantiate(Wall,new Vector3(x-CellWidth/2,0,z)+Wall.transform.position,Quaternion.Euler(0,270,0)) as GameObject;// left
+                    GameObject newWall = RandomWall();
+                    tmp = Instantiate(newWall, new Vector3(x-CellWidth/2,0,z)+ newWall.transform.position,Quaternion.Euler(0,270,0)) as GameObject;// left
 					tmp.transform.parent = transform;
 				}
 				if(cell.WallBack){
-					tmp = Instantiate(Wall,new Vector3(x,0,z-CellHeight/2)+Wall.transform.position,Quaternion.Euler(0,180,0)) as GameObject;// back
+                    GameObject newWall = RandomWall();
+                    tmp = Instantiate(newWall, new Vector3(x,0,z-CellHeight/2)+ newWall.transform.position,Quaternion.Euler(0,180,0)) as GameObject;// back
 					tmp.transform.parent = transform;
 				}
 				if(cell.IsGoal && GoalPrefab != null){
@@ -103,5 +107,13 @@ public class MazeSpawner : MonoBehaviour {
 				}
 			}
 		}
+	}
+
+	GameObject RandomWall()
+	{
+		int count = Wall.Count;
+		int randomObject = Random.Range(0,count);
+		return Wall[randomObject];
+
 	}
 }
