@@ -131,6 +131,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1472106031799893659}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d6ad0904914e5e740b3b581021314953,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 357923869384221451}
   m_SourcePrefab: {fileID: 100100000, guid: d6ad0904914e5e740b3b581021314953, type: 3}
 --- !u!4 &148874533976997954 stripped
 Transform:
@@ -262,6 +266,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &357923869384221451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674194369699207928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5b1b54556836a49948cf0f09394c28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RingOnValidPickup: 1
+  RingOnValidRemotePickup: 1
+  RingHelperScale: 0.2
 --- !u!1001 &1431582427734207864
 PrefabInstance:
   m_ObjectHideFlags: 0
