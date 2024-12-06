@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8708761941166170280}
   - component: {fileID: 3077423302026296248}
   - component: {fileID: 1247845116185898471}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4893,6 +4893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SM_Battery
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f51ea1c412eb96a4cb37feae7ddb6eee,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
