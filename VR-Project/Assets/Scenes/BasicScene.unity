@@ -272,7 +272,8 @@ MonoBehaviour:
   CellWidth: 6
   CellHeight: 6
   AddGaps: 0
-  GoalPrefab: {fileID: 1776079692457040, guid: 53c15703dacf1c948b5b3211c0c9a311, type: 3}
+  GoalPrefab: {fileID: 6941461435930878293, guid: 00d389bba102fd24aa347ea9ffb1f56c,
+    type: 3}
 --- !u!1001 &443893389
 PrefabInstance:
   m_ObjectHideFlags: 0
