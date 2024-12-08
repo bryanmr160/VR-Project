@@ -272,7 +272,7 @@ MonoBehaviour:
   CellWidth: 6
   CellHeight: 6
   AddGaps: 0
-  GoalPrefab: {fileID: 6941461435930878293, guid: 00d389bba102fd24aa347ea9ffb1f56c,
+  GoalPrefab: {fileID: 3365937889063788372, guid: 08451ab3fd8f1514cad3a8e6858549c1,
     type: 3}
 --- !u!1001 &407293206
 PrefabInstance:
@@ -287,6 +287,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Monster (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3538228168421978149, guid: 03c053f6cfcf0e44f847b2eda3e2899a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1606955700}
     - target: {fileID: 8057270696775760443, guid: 03c053f6cfcf0e44f847b2eda3e2899a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -423,6 +428,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Monster (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3538228168421978149, guid: 03c053f6cfcf0e44f847b2eda3e2899a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1606955700}
     - target: {fileID: 8057270696775760443, guid: 03c053f6cfcf0e44f847b2eda3e2899a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -875,6 +885,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Monster (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3538228168421978149, guid: 03c053f6cfcf0e44f847b2eda3e2899a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1606955700}
     - target: {fileID: 8057270696775760443, guid: 03c053f6cfcf0e44f847b2eda3e2899a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1289,6 +1304,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy Monster (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3538228168421978149, guid: 03c053f6cfcf0e44f847b2eda3e2899a,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1606955700}
     - target: {fileID: 8057270696775760443, guid: 03c053f6cfcf0e44f847b2eda3e2899a,
         type: 3}
       propertyPath: m_LocalPosition.x
